@@ -7,17 +7,20 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 //MARK: - Custom Cell for TableView
 class BeerTableViewCell: UITableViewCell {
     private lazy var titleView: UILabel = {
         let view = UILabel()
         view.textColor = .black
-        view.font = .systemFont(ofSize: 15)
+        view.numberOfLines = 0
+        view.font = .systemFont(ofSize: 17, weight: .bold)
         return view
     }()
     private lazy var myImageView: UIImageView = {
         let image = UIImageView()
-        image.image = UIImage(systemName: "heart")
+        image.image = UIImage(systemName: "")
+        image.contentMode = .scaleAspectFit
         return image
     }()
     
@@ -31,8 +34,8 @@ class BeerTableViewCell: UITableViewCell {
     private func setupSubview() {
         addSubview(titleView)
         addSubview(myImageView)
-        titleView.frame = CGRect(x: 0, y:0, width: 300, height: 60)
-        titleView.center = center
+        myImageView.frame = CGRect(x: 0, y: 20, width: 100, height: 100)
+        titleView.frame = CGRect(x: 100, y: 50, width: 300, height: 30)
     }
     override func prepareForReuse() {
          super.prepareForReuse()
@@ -41,6 +44,7 @@ class BeerTableViewCell: UITableViewCell {
     func setupView(model: Beer) {
         DispatchQueue.main.async {
             self.titleView.text = model.name
+            self.myImageView.kf.setImage(with: URL(string: model.imageURL ?? ""))
         }
     }
     

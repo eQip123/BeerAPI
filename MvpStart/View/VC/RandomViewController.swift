@@ -13,7 +13,7 @@ protocol RandomView: AnyObject {
     func getRandomBeer(beer: [Beer])
 }
 class RandomViewController: UIViewController {
-    var presenter: RandomViewPresenter?
+      var presenter: RandomViewPresenter?
     private lazy var image: UIImageView = {
         let imageView = UIImageView(image: UIImage(systemName: ""))
         imageView.sizeToFit()
@@ -48,6 +48,8 @@ class RandomViewController: UIViewController {
         super.viewDidLoad()
         setupConstraints()
         setupView()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Random Beer"
     }
     private func setupConstraints() {
         view.addSubview(image)

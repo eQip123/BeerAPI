@@ -7,14 +7,14 @@
 
 import Foundation
 import UIKit
-import SwiftUI
 
 protocol SearchView: AnyObject {
-    func getSearchBeer(beer: [Beer])
+    func getSearchId(beer: [Beer])
 }
 
 class SearchViewController: UIViewController {
-    weak var presenter: SearchViewPresenter?
+    
+      var presenter: SearchViewPresenter!
     
     private lazy var searchTextField: UITextField = {
         let textField = UITextField()
@@ -36,7 +36,7 @@ class SearchViewController: UIViewController {
     }()
     
     private lazy var image: UIImageView = {
-        let imageView = UIImageView(image: UIImage(systemName: "heart"))
+        let imageView = UIImageView()
         imageView.sizeToFit()
         imageView.contentMode = .scaleAspectFit
         return imageView
@@ -64,6 +64,9 @@ class SearchViewController: UIViewController {
         view.backgroundColor = .white
         searchTextField.delegate = self
         setupConstraints()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Search"
+    
     }
     private func setupConstraints() {
         view.addSubview(searchTextField)
@@ -73,7 +76,7 @@ class SearchViewController: UIViewController {
         view.addSubview(bodyLabel)
         
         searchTextField.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
             make.leading.equalToSuperview().offset(40)
             make.trailing.equalToSuperview().offset(-100)
             make.height.equalTo(40)
@@ -101,27 +104,22 @@ class SearchViewController: UIViewController {
     }
     
     @objc func searchButtonPresed() {
-        if let searchId = searchTextField.text {
-            NetworkApi.shared.getSearchId(id: Int(searchId)!) { beer in
-                self.getSearchBeer(beer: beer)
-            }
+        if let searchID = searchTextField.text {
+            presenter.getSearchBeerPresenter(id: Int(searchID) ?? 1)
         }
-//        if let searchId = searchTextField.text {
-//            presenter?.getSearchBeerPresenter(id: Int(searchId)!)
-//        }
+        searchTextField.resignFirstResponder()
 
     }
     
 }
 extension SearchViewController: SearchView {
-    func getSearchBeer(beer: [Beer]) {
+    func getSearchId(beer: [Beer]) {
         nameLabel.text = beer[0].name
         bodyLabel.text = beer[0].description
         image.kf.setImage(with: URL(string: beer[0].imageURL ?? ""))
     }
 }
 extension SearchViewController: UITextFieldDelegate {
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print(searchTextField.text!)
         searchTextField.endEditing(true) // Убирает клавиатуру, после нажатия кнопки в клаве
@@ -136,9 +134,9 @@ extension SearchViewController: UITextFieldDelegate {
         }
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-//        if let searchId = searchTextField.text {
-//            presenter?.getSearchBeerPresenter(id: Int(searchId)!)
-//        }
+        if let searchID = searchTextField.text {
+            presenter.getSearchBeerPresenter(id: Int(searchID) ?? 0)
+        }
         searchTextField.text = ""
         
     }

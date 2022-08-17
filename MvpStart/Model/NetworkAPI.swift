@@ -15,6 +15,7 @@ protocol NetworkService {
     func getSearchId(id: Int, completion: @escaping ([Beer]) -> Void )
 }
 class NetworkApi: NetworkService {
+
     static let shared = NetworkApi()
     let session = URLSession.shared
     let baseURL = "https://api.punkapi.com/v2/"

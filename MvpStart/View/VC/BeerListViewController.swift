@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 import SnapKit
-
+import Kingfisher
 protocol BeerListView: AnyObject {
     func getBeerList(beers: [Beer])
 }
@@ -29,6 +29,8 @@ class BeerListViewController: UIViewController {
         super.viewDidLoad()
         presenter.viewDidLoad()
         setupSubview()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "List"
     }
     
     private func setupSubview() {
@@ -54,7 +56,9 @@ extension BeerListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
     
 }
 extension BeerListViewController: BeerListView {

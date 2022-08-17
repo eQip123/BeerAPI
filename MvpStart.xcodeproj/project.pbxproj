@@ -10,7 +10,6 @@
 		1C4FCE0328A3E32C00366F55 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4FCE0228A3E32C00366F55 /* SearchPresenter.swift */; };
 		1C4FCE0528A3E34000366F55 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4FCE0428A3E34000366F55 /* SearchViewController.swift */; };
 		1C6C5D2828A3A4B70085E61C /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6C5D2728A3A4B70085E61C /* RandomViewController.swift */; };
-		1C6C5D2A28A3AA820085E61C /* RandomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6C5D2928A3AA820085E61C /* RandomPresenter.swift */; };
 		1C6C5D2B28A3BE5D0085E61C /* Pods_MvpStart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F360AF182E579C3C5C71C16 /* Pods_MvpStart.framework */; };
 		1C85EF8F289FE12F00DB3C8E /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C85EF8E289FE12F00DB3C8E /* NetworkAPI.swift */; };
 		1C9629D7289D5B3F00291E8B /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9629D6289D5B3F00291E8B /* BeerListViewController.swift */; };
@@ -23,6 +22,7 @@
 		1CEE9680289D503E001B3F3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CEE967F289D503E001B3F3C /* Assets.xcassets */; };
 		1CEE9683289D503E001B3F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEE9681289D503E001B3F3C /* LaunchScreen.storyboard */; };
 		1CEE9690289D53F4001B3F3C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE968F289D53F4001B3F3C /* TabBarController.swift */; };
+		1CF93C7C28AA2F3C00470839 /* RandomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6C5D2928A3AA820085E61C /* RandomPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -281,12 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C6C5D2A28A3AA820085E61C /* RandomPresenter.swift in Sources */,
 				1C85EF8F289FE12F00DB3C8E /* NetworkAPI.swift in Sources */,
 				1C4FCE0328A3E32C00366F55 /* SearchPresenter.swift in Sources */,
 				1C6C5D2828A3A4B70085E61C /* RandomViewController.swift in Sources */,
 				1C9629DB289D5C8000291E8B /* BeerTableViewCell.swift in Sources */,
 				1CEE9690289D53F4001B3F3C /* TabBarController.swift in Sources */,
+				1CF93C7C28AA2F3C00470839 /* RandomPresenter.swift in Sources */,
 				1CEE9677289D503D001B3F3C /* AppDelegate.swift in Sources */,
 				1C9629DF289D66E600291E8B /* BeerListPresenter.swift in Sources */,
 				1C9629D7289D5B3F00291E8B /* BeerListViewController.swift in Sources */,

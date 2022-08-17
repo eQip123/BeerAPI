@@ -12,7 +12,7 @@ protocol RandomViewPresenter: AnyObject {
     func getRandomBeer()
 }
 class RandomPresenter: RandomViewPresenter {
-    private weak var view: RandomView?
+      var view: RandomView?
     
     required init(view: RandomView) {
         self.view = view
