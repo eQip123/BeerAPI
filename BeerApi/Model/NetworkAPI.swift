@@ -6,8 +6,6 @@
 //
 
 import Foundation
-import CloudKit
-import SwiftUI
 
 protocol NetworkService {
     func getBeerList(completion: @escaping ([Beer]) -> Void )

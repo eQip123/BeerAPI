@@ -36,7 +36,7 @@
 		1C9629DA289D5C8000291E8B /* BeerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableViewCell.swift; sourceTree = "<group>"; };
 		1C9629DC289D5D8F00291E8B /* BeerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerData.swift; sourceTree = "<group>"; };
 		1C9629DE289D66E600291E8B /* BeerListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListPresenter.swift; sourceTree = "<group>"; };
-		1CEE9673289D503D001B3F3C /* MvpStart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MvpStart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CEE9673289D503D001B3F3C /* BeerApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CEE9676289D503D001B3F3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CEE9678289D503D001B3F3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1CEE967D289D503D001B3F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		1CEE966A289D503C001B3F3C = {
 			isa = PBXGroup;
 			children = (
-				1CEE9675289D503D001B3F3C /* MvpStart */,
+				1CEE9675289D503D001B3F3C /* BeerApi */,
 				1CEE9674289D503D001B3F3C /* Products */,
 				34E01B7529D638797E9E3BBC /* Pods */,
 				1A45DADEA5BCB5227F8C3E59 /* Frameworks */,
@@ -109,12 +109,12 @@
 		1CEE9674289D503D001B3F3C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1CEE9673289D503D001B3F3C /* MvpStart.app */,
+				1CEE9673289D503D001B3F3C /* BeerApi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1CEE9675289D503D001B3F3C /* MvpStart */ = {
+		1CEE9675289D503D001B3F3C /* BeerApi */ = {
 			isa = PBXGroup;
 			children = (
 				1C9629E0289E4B4200291E8B /* AppDelegate */,
@@ -126,7 +126,7 @@
 				1CEE9681289D503E001B3F3C /* LaunchScreen.storyboard */,
 				1CEE9684289D503E001B3F3C /* Info.plist */,
 			);
-			path = MvpStart;
+			path = BeerApi;
 			sourceTree = "<group>";
 		};
 		1CEE968A289D5321001B3F3C /* View */ = {
@@ -169,9 +169,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1CEE9672289D503D001B3F3C /* MvpStart */ = {
+		1CEE9672289D503D001B3F3C /* BeerApi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1CEE9687289D503E001B3F3C /* Build configuration list for PBXNativeTarget "MvpStart" */;
+			buildConfigurationList = 1CEE9687289D503E001B3F3C /* Build configuration list for PBXNativeTarget "BeerApi" */;
 			buildPhases = (
 				8EC2A86F52ABCE38416A52F4 /* [CP] Check Pods Manifest.lock */,
 				1CEE966F289D503D001B3F3C /* Sources */,
@@ -183,9 +183,9 @@
 			);
 			dependencies = (
 			);
-			name = MvpStart;
+			name = BeerApi;
 			productName = MvpStart;
-			productReference = 1CEE9673289D503D001B3F3C /* MvpStart.app */;
+			productReference = 1CEE9673289D503D001B3F3C /* BeerApi.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -203,7 +203,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1CEE966E289D503C001B3F3C /* Build configuration list for PBXProject "MvpStart" */;
+			buildConfigurationList = 1CEE966E289D503C001B3F3C /* Build configuration list for PBXProject "BeerApi" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -216,7 +216,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1CEE9672289D503D001B3F3C /* MvpStart */,
+				1CEE9672289D503D001B3F3C /* BeerApi */,
 			);
 		};
 /* End PBXProject section */
@@ -441,7 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MvpStart/Info.plist;
+				INFOPLIST_FILE = BeerApi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -452,7 +452,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = eQip.MvpStart;
+				PLIST_FILE_OUTPUT_FORMAT = binary;
+				PRODUCT_BUNDLE_IDENTIFIER = eQip.BeerApi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -469,7 +470,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MvpStart/Info.plist;
+				INFOPLIST_FILE = BeerApi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -480,7 +481,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = eQip.MvpStart;
+				PLIST_FILE_OUTPUT_FORMAT = binary;
+				PRODUCT_BUNDLE_IDENTIFIER = eQip.BeerApi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -491,7 +493,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1CEE966E289D503C001B3F3C /* Build configuration list for PBXProject "MvpStart" */ = {
+		1CEE966E289D503C001B3F3C /* Build configuration list for PBXProject "BeerApi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1CEE9685289D503E001B3F3C /* Debug */,
@@ -500,7 +502,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1CEE9687289D503E001B3F3C /* Build configuration list for PBXNativeTarget "MvpStart" */ = {
+		1CEE9687289D503E001B3F3C /* Build configuration list for PBXNativeTarget "BeerApi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1CEE9688289D503E001B3F3C /* Debug */,
