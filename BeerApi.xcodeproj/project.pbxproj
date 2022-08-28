@@ -10,7 +10,6 @@
 		1C4FCE0328A3E32C00366F55 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4FCE0228A3E32C00366F55 /* SearchPresenter.swift */; };
 		1C4FCE0528A3E34000366F55 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4FCE0428A3E34000366F55 /* SearchViewController.swift */; };
 		1C6C5D2828A3A4B70085E61C /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6C5D2728A3A4B70085E61C /* RandomViewController.swift */; };
-		1C6C5D2B28A3BE5D0085E61C /* Pods_MvpStart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F360AF182E579C3C5C71C16 /* Pods_MvpStart.framework */; };
 		1C85EF8F289FE12F00DB3C8E /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C85EF8E289FE12F00DB3C8E /* NetworkAPI.swift */; };
 		1C9629D7289D5B3F00291E8B /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9629D6289D5B3F00291E8B /* BeerListViewController.swift */; };
 		1C9629DB289D5C8000291E8B /* BeerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9629DA289D5C8000291E8B /* BeerTableViewCell.swift */; };
@@ -23,10 +22,11 @@
 		1CEE9683289D503E001B3F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEE9681289D503E001B3F3C /* LaunchScreen.storyboard */; };
 		1CEE9690289D53F4001B3F3C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEE968F289D53F4001B3F3C /* TabBarController.swift */; };
 		1CF93C7C28AA2F3C00470839 /* RandomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6C5D2928A3AA820085E61C /* RandomPresenter.swift */; };
+		52B1DD8142693E12EB8F8861 /* Pods_BeerApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083409F2350BA16ECD7D56F7 /* Pods_BeerApi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F360AF182E579C3C5C71C16 /* Pods_MvpStart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MvpStart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		083409F2350BA16ECD7D56F7 /* Pods_BeerApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C4FCE0228A3E32C00366F55 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		1C4FCE0428A3E34000366F55 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1C6C5D2728A3A4B70085E61C /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
@@ -44,7 +44,9 @@
 		1CEE9682289D503E001B3F3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CEE9684289D503E001B3F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CEE968F289D53F4001B3F3C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		398065DAEE2B7BFA7120DFB5 /* Pods-BeerApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerApi.debug.xcconfig"; path = "Target Support Files/Pods-BeerApi/Pods-BeerApi.debug.xcconfig"; sourceTree = "<group>"; };
 		B08F8332693C008A5B2AAC19 /* Pods-MvpStart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvpStart.release.xcconfig"; path = "Target Support Files/Pods-MvpStart/Pods-MvpStart.release.xcconfig"; sourceTree = "<group>"; };
+		BC39B1E046F90840BACAA858 /* Pods-BeerApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerApi.release.xcconfig"; path = "Target Support Files/Pods-BeerApi/Pods-BeerApi.release.xcconfig"; sourceTree = "<group>"; };
 		D0AFC38D693644BC601838E5 /* Pods-MvpStart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MvpStart.debug.xcconfig"; path = "Target Support Files/Pods-MvpStart/Pods-MvpStart.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C6C5D2B28A3BE5D0085E61C /* Pods_MvpStart.framework in Frameworks */,
+				52B1DD8142693E12EB8F8861 /* Pods_BeerApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +65,7 @@
 		1A45DADEA5BCB5227F8C3E59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0F360AF182E579C3C5C71C16 /* Pods_MvpStart.framework */,
+				083409F2350BA16ECD7D56F7 /* Pods_BeerApi.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,6 +164,8 @@
 			children = (
 				D0AFC38D693644BC601838E5 /* Pods-MvpStart.debug.xcconfig */,
 				B08F8332693C008A5B2AAC19 /* Pods-MvpStart.release.xcconfig */,
+				398065DAEE2B7BFA7120DFB5 /* Pods-BeerApi.debug.xcconfig */,
+				BC39B1E046F90840BACAA858 /* Pods-BeerApi.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -250,7 +254,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MvpStart-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BeerApi-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -263,15 +267,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MvpStart/Pods-MvpStart-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-BeerApi/Pods-BeerApi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MvpStart/Pods-MvpStart-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-BeerApi/Pods-BeerApi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MvpStart/Pods-MvpStart-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeerApi/Pods-BeerApi-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -434,7 +438,7 @@
 		};
 		1CEE9688289D503E001B3F3C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0AFC38D693644BC601838E5 /* Pods-MvpStart.debug.xcconfig */;
+			baseConfigurationReference = 398065DAEE2B7BFA7120DFB5 /* Pods-BeerApi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -463,7 +467,7 @@
 		};
 		1CEE9689289D503E001B3F3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B08F8332693C008A5B2AAC19 /* Pods-MvpStart.release.xcconfig */;
+			baseConfigurationReference = BC39B1E046F90840BACAA858 /* Pods-BeerApi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
