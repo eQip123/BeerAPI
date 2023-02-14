@@ -10,7 +10,7 @@ import Foundation
 protocol NetworkService {
     func getBeerList(completion: @escaping ([Beer]) -> Void )
     func getRandomBeerAPI(completion: @escaping ([Beer]) -> Void )
-    func getSearchId(id: Int, completion: @escaping ([Beer]) -> Void )
+    func getSearchId(id: Int, completion: @escaping (Result<[Beer], Error>) -> Void)
 }
 class NetworkApi: NetworkService {
 
@@ -48,19 +48,22 @@ class NetworkApi: NetworkService {
         }.resume()
     }
 
-    func getSearchId(id: Int, completion: @escaping ([Beer]) -> Void) {
+    func getSearchId(id: Int, completion: @escaping (Result<[Beer], Error>) -> Void) {
         let request = URLRequest(url: URL(string: baseURL + "beers/\(id)")!)
         session.dataTask(with: request) { data, _, _ in
             DispatchQueue.main.async {
                 guard let data = data,
                       let response = try? JSONDecoder().decode([Beer].self, from: data)
                 else {
-                    completion([])
+                    completion(.failure(Errors.errorNil))
                     return
                 }
-                completion(response)
+                completion(.success(response))
             }
         }.resume()
     }
     
+}
+enum Errors: Error {
+    case errorNil
 }

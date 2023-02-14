@@ -10,6 +10,7 @@ import UIKit
 
 protocol SearchView: AnyObject {
     func getSearchId(beer: [Beer])
+    func showError(message: String)
 }
 
 class SearchViewController: UIViewController {
@@ -43,7 +44,6 @@ class SearchViewController: UIViewController {
     }()
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.text = ""
         label.font = .systemFont(ofSize: 16)
         label.textColor = .gray
         label.textAlignment = .center
@@ -52,7 +52,6 @@ class SearchViewController: UIViewController {
     }()
     private lazy var bodyLabel: UILabel = {
         let label = UILabel()
-        label.text = ""
         label.font = .systemFont(ofSize: 16)
         label.textColor = .black
         label.numberOfLines = 0
@@ -105,7 +104,9 @@ class SearchViewController: UIViewController {
     
     @objc func searchButtonPresed() {
         if let searchID = searchTextField.text {
-            presenter.getSearchBeerPresenter(id: Int(searchID) ?? 1)
+            if let convertToString = Int(searchID) {
+                presenter.getSearchBeerPresenter(id: convertToString)
+            }
         }
         searchTextField.resignFirstResponder()
 
@@ -114,9 +115,11 @@ class SearchViewController: UIViewController {
 }
 extension SearchViewController: SearchView {
     func getSearchId(beer: [Beer]) {
-        nameLabel.text = beer[0].name
-        bodyLabel.text = beer[0].description
-        image.kf.setImage(with: URL(string: beer[0].imageURL ?? ""))
+        for i in beer {
+            nameLabel.text = i.name
+            bodyLabel.text = i.description
+            image.kf.setImage(with: URL(string: i.imageURL ?? ""))
+        }
     }
 }
 extension SearchViewController: UITextFieldDelegate {
@@ -139,6 +142,10 @@ extension SearchViewController: UITextFieldDelegate {
         }
         searchTextField.text = ""
         
+    }
+    func showError(message: String) {
+        nameLabel.text = "search by ID only"
+        bodyLabel.text = message
     }
 }
 
