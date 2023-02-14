@@ -21,7 +21,12 @@ class SearchPresenter: SearchViewPresenter {
     
     func getSearchBeerPresenter(id: Int) {
         NetworkApi.shared.getSearchId(id: id) { beer in
-            self.view?.getSearchId(beer: beer)
+            switch beer {
+            case .success(let success):
+                self.view?.getSearchId(beer: success)
+            case .failure(let failure):
+                self.view?.showError(message: "not found")
+            }
         }
     }
 
