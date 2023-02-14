@@ -25,6 +25,7 @@ class SearchPresenter: SearchViewPresenter {
             case .success(let success):
                 self.view?.getSearchId(beer: success)
             case .failure(let failure):
+                print(failure)
                 self.view?.showError(message: "not found")
             }
         }
